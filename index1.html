@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Document</title>
+
+<link href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/offcanvas.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="navbar navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+
+                <!-- .navbar-toggle样式用于toggle收缩的内容，即nav-collapse collapse样式所在元素 -->
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+         <span class="sr-only">Toggle Navigation</span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+                </button>
+                <!-- 确保无论是宽屏还是窄屏，navbar-brand都显示 -->
+                <a href="##" class="navbar-brand">慕课网</a>
+            </div>
+            <!-- 屏幕宽度小于768px时，div.navbar-responsive-collapse容器里的内容都会隐藏，显示icon-bar图标，当点击icon-bar图标时，再展开。屏幕大于768px时，默认显示。 -->
+            <div class="collapse navbar-collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="##">网站首页</a></li>
+                    <li><a href="##">系列教程</a></li>
+                    <li><a href="##">名师介绍</a></li>
+                    <li><a href="##">成功案例</a></li>
+                    <li><a href="##">关于我们</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row row-offcanvas row-offcanvas-right">
+            <div class="col-sm-9">
+                <p class="pull-right visible-xs">
+                    <button class="btn btn-xs btn-success" type="button" data-toggle="offcanvas">toggle</button>
+                </p>
+                <div class="panel panel-default">
+                    <div class="panel-heading">图解CSS3</div>
+                    <div class="panel-body">详细讲解了选择器、边框、背景、文本、颜色、盒模型、伸缩布局盒模型、多列布局、渐变、过渡、动画、媒体、响应Web设计、Web字体等主题下涵盖的所有CSS3新特性</div>
+                    <div class="panel-footer">作者：大漠</div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-lg-4">
+                        <h2>
+                            headingline
+                        </h2>
+                        <p>详细讲解了选择器、边框、背景、文本、颜色、盒模型、伸缩布局盒模型、多列布局、渐变、过渡、动画、媒体、响应Webback设计、Web字体等主题下</p>
+                        <a href="www.baidu.com" class="btn btn-success">arcdkjl</a>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <h2>
+                            headingline
+                        </h2>
+                        <p>详细讲解了选择器、边框、背景、文本、颜色、盒模型、伸缩布局盒模型、多列布局、渐变、过渡、动画、媒体、响应Webback设计、Web字体等主题下</p>
+                        <a href="www.baidu.com" class="btn btn-success">arcdkjl</a>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <h2>
+                            headingline
+                        </h2>
+                        <p>详细讲解了选择器、边框、背景、文本、颜色、盒模型、伸缩布局盒模型、多列布局、渐变、过渡、动画、媒体、响应Webback设计、Web字体等主题下</p>
+                        <a href="www.baidu.com" class="btn btn-success">arcdkjl</a>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <h2>
+                            headingline
+                        </h2>
+                        <p>详细讲解了选择器、边框、背景、文本、颜色、盒模型、伸缩布局盒模型、多列布局、渐变、过渡、动画、媒体、响应Webback设计、Web字体等主题下</p>
+                        <a href="www.baidu.com" class="btn btn-success">arcdkjl</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+                <div class="list-group">
+                    <a href="##" class="list-group-item">图解CSS3</a>
+                    <a href="##" class="list-group-item"><span class="badge">220</span>Sass教程</a>
+                    <a href="##" class="list-group-item">玩转Bootstrap</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('[data-toggle="offcanvas"]').click(function() {
+                $('.row-offcanvas').toggleClass('active')
+            });
+        });
+    </script>
+    <script>
+        alert("sadada")
+    </script>
+</body>
+</html>
