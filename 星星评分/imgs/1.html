@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>第一个简单的jQuery程序</title>
+    <style type="text/css">
+        div{
+            padding:8px 0px;
+            font-size:12px;
+            text-align:center;
+            border:solid 1px #888;
+            height:20px;
+            width:200px;
+        }
+    </style>
+    <script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+   
+</head>
+<body>
+    <div class='we'>sdffsd</div>
+     <script type="text/javascript">
+		   (function($){
+            $.fn.extend({
+              reaL:function(){
+                  this.each(function(){
+                 return $(this).css('color','red');
+                 });
+                }
+            });
+        })(jQuery);
+         $('.we').reaL();
+        //  $('.we').css('color','red');
+     </script>
+</body>
+</html>
