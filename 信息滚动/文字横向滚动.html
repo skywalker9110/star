@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		
+/*
+		#div1 {
+			margin-left: 50px;
+			width: 150px;
+			height: 25px;
+			background: red;
+			padding-top: 5px;
+			
+		}
+*/
+		
+		#div2 {
+			/* 去除两个行内块级元素边距 */
+			font-size: 0;
+			/* 不换行 */
+			white-space: nowrap;
+			height: 20px;
+			background: gray;
+			overflow: hidden;
+			width:150px;
+			
+		}
+		
+		ul {
+			/* 设置为行内块级元素 */
+			display: inline-block;
+			/* 重写font-size */
+			font-size: 15px;
+			list-style: none;
+			height: 20px;
+		}
+		
+		li {
+			line-height: 20px;
+			float: left;
+			width: 25px;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			var div2 = document.getElementById("div2")
+			var ul1 = document.getElementById("ul1")
+			var ul2 = document.getElementById("ul2")
+		    ul2.innerHTML = ul1.innerHTML;
+			var speed = 50;
+			var tag = 1;
+			function scrollup() {
+				//            if (div2.scrollLeft === 0) {
+				//                tag = 1;
+				//            }
+				//            if (div2.scrollLeft === ul1.scrollWidth) {
+				//                tag = -1;
+				//            }
+				//            div2.scrollLeft += tag;
+				if (div2.scrollLeft >=ul1.scrollWidth) {
+					div2.scrollLeft = 0
+				} else {
+					div2.scrollLeft++;
+				}
+			}
+			var time = setInterval(scrollup,speed);
+			div2.onmousemove = function() {
+				clearInterval(time);
+			}
+			div2.onmouseout = function() {
+				time = setInterval(scrollup,speed);
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<div id="div1">
+		<div id="div2">
+			<ul id="ul1">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+			</ul>
+			<ul id="ul2"></ul>
+		</div>
+	</div>
+</body>
+
+</html>
