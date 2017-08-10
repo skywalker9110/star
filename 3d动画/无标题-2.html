@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3练习案例</title>
+</head>
+<style type="text/css">
+    *{
+        margin:0px;
+        padding:0px;
+    }
+    .light{
+        margin-top:200px;
+        margin-left: 200px;
+        width:180px;
+        height:180px;
+        position:absolute;
+        perspective:500px;
+	
+    }
+    .light .stage{
+        position:relative;
+        width:180px;
+        height:180px;
+        transform-style:preserve-3d;
+        -webkit-transition: all 0.8s;
+	
+    }
+    .light .stage .image1{
+        width:180px;
+        height:180px;
+        position:absolute;
+		background: yellow;
+        -webkit-transform:translateZ(90px) ;
+        -webkit-transition: all 0.8s;
+		
+    }
+    .light .stage .image2{
+        width:180px;
+        height:180px;
+		background: blue;
+        position:absolute;
+        -webkit-transition: all 0.8s;
+        -webkit-transform: rotateX(-90deg) translateZ(90px) ;
+	
+		
+    } 
+    .light .stage:hover{
+        -webkit-transform: rotateX(90deg);
+		
+    }
+</style>
+<body>
+    <div class="light">
+        <div class="stage">
+            <img class="image1" src="images/touch.png" />
+            <img class="image2" src="images/touch.png" />
+        </div>
+    </div>
+</body>
+</html>
